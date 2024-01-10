@@ -1,0 +1,18 @@
+{% extends 'base.html.twig'  %}
+
+{% block body %}
+<section class="py-5 container">
+    <h1>Ajouter un article</h1>
+    {# {{ form(formAnnonce) }} #}
+    {{form_start(formArticle)}}
+        {{ form_row(formArticle.titre_article)}}<br>
+        {{ form_row(formArticle.description_article)}}<br>
+        {{ form_row(formArticle.rating)}}<br>
+        {{ form_row(formArticle.game_id)}}<br>
+        {{ form_row(formArticle.game_name)}}<br>
+        {#{{ form_row(formArticle.User)}}<br>#}
+
+        <input type="submit" value="Ajouter" class="btn btn-success">
+    {{form_end(formAnnonce)}}
+</section>
+{% endblock %}
